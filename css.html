@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>CSS — Questions &amp; Answers · NM Full Stack</title>
+  <meta name="description"
+    content="Learn CSS fundamentals — the box model, selectors, Flexbox, Grid, positioning, units and responsive media queries.">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%238b5cf6%22/><text x=%2250%22 y=%2266%22 font-size=%2255%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22monospace%22>N</text></svg>">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Site stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-topic="css">
+
+  <header>
+    <nav class="navbar navbar-expand-lg nm-navbar fixed-top">
+      <div class="container-xl">
+        <a class="navbar-brand nm-brand" href="index.html">NM_FullStack<span class="cursor">_</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nmNav"
+          aria-controls="nmNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nmNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1">
+            <li class="nav-item"><a class="nav-link" href="index.html"><span class="lang-dot"></span>Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="html.html" data-topic="html"><span
+                  class="lang-dot"></span>HTML</a></li>
+            <li class="nav-item"><a class="nav-link active" href="css.html" data-topic="css"><span
+                  class="lang-dot"></span>CSS</a></li>
+            <li class="nav-item"><a class="nav-link" href="javascript.html" data-topic="javascript"><span
+                  class="lang-dot"></span>JavaScript</a></li>
+            <li class="nav-item"><a class="nav-link" href="react.html" data-topic="react"><span
+                  class="lang-dot"></span>React</a></li>
+            <li class="nav-item"><a class="nav-link" href="mysql.html" data-topic="mysql"><span
+                  class="lang-dot"></span>MySQL</a></li>
+            <li class="nav-item"><a class="nav-link" href="nodejs.html" data-topic="nodejs"><span
+                  class="lang-dot"></span>Node.js</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div style="height:70px;" aria-hidden="true"></div>
+
+  <main>
+
+    <section class="topic-hero" data-topic="css">
+      <div class="container-xl">
+        <span class="topic-badge"><span class="lang-dot"></span>Frontend &middot; Styling Language</span>
+        <div class="accent-bar"></div>
+        <h1>CSS</h1>
+        <p class="lead">Cascading Style Sheets control colour, layout, spacing and responsiveness. This file walks
+          through the concepts that come up in almost every project.</p>
+      </div>
+    </section>
+
+    <section class="pb-5" data-topic="css">
+      <div class="container-xl">
+        <div class="editor-window mb-4">
+          <div class="tab-bar">
+            <div class="tab-dots"><span></span><span></span><span></span></div>
+            <div class="tab-chip">styles.css</div>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 order-2 order-lg-1">
+            <div class="outline-card">
+              <h6>On this page &middot; 16 questions</h6>
+              <a class="outline-link" href="#qcss1"><span class="ln">Q01</span><span>What is CSS and how is it linked to
+                  HTML?</span></a><a class="outline-link" href="#qcss2"><span class="ln">Q02</span><span>What is the CSS
+                  box model?</span></a><a class="outline-link" href="#qcss3"><span class="ln">Q03</span><span>What's the
+                  difference between class and id selectors, and specificity?</span></a><a class="outline-link"
+                href="#qcss4"><span class="ln">Q04</span><span>What is the difference between relative, absolute, fixed,
+                  and sticky positioning?</span></a><a class="outline-link" href="#qcss5"><span
+                  class="ln">Q05</span><span>What is Flexbox and when should you use it?</span></a><a
+                class="outline-link" href="#qcss6"><span class="ln">Q06</span><span>What is CSS Grid and how does it
+                  differ from Flexbox?</span></a><a class="outline-link" href="#qcss7"><span
+                  class="ln">Q07</span><span>What are media queries and why are they important?</span></a><a
+                class="outline-link" href="#qcss8"><span class="ln">Q08</span><span>What is the difference between em,
+                  rem, %, and px units?</span></a>
+              <a class="outline-link" href="#qcss9"><span class="ln">Q09</span><span>What is the difference between
+                  inline, internal, and external CSS?</span></a><a class="outline-link" href="#qcss10"><span
+                  class="ln">Q10</span><span>What is the difference between pseudo-classes and
+                  pseudo-elements?</span></a><a class="outline-link" href="#qcss11"><span class="ln">Q11</span><span>How
+                  does the CSS cascade and inheritance work?</span></a><a class="outline-link" href="#qcss12"><span
+                  class="ln">Q12</span><span>What is the difference between visibility: hidden and display:
+                  none?</span></a><a class="outline-link" href="#qcss13"><span class="ln">Q13</span><span>What are CSS
+                  custom properties (variables)?</span></a><a class="outline-link" href="#qcss14"><span
+                  class="ln">Q14</span><span>What is the difference between transitions and animations in
+                  CSS?</span></a><a class="outline-link" href="#qcss15"><span class="ln">Q15</span><span>What is the
+                  difference between min-width, max-width and width in responsive design?</span></a><a
+                class="outline-link" href="#qcss16"><span class="ln">Q16</span><span>What is CSS specificity and how do
+                  you calculate it?</span></a>
+              <ul class="meta-list">
+                <li><span>Layer</span><span>Frontend / Presentation</span></li>
+                <li><span>Difficulty</span><span>Beginner &ndash; Intermediate</span></li>
+                <li><span>Pairs with</span><span>HTML, JavaScript</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-8 order-1 order-lg-2">
+            <div class="accordion qa-accordion" id="qaAccordion">
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hcss1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#qcss1"
+                    aria-expanded="true" aria-controls="qcss1">
+                    <span class="qline">Q01</span><span>What is CSS and how is it linked to HTML?</span>
+                  </button>
+                </h2>
+                <div id="qcss1" class="accordion-collapse collapse show" aria-labelledby="hcss1"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>CSS (Cascading Style Sheets) describes how HTML elements should look &mdash; colours, fonts,
+                      spacing, layout and animation. It can be linked to a page in three ways:</p>
+                    <pre>&lt;!-- External (recommended) --&gt;
+&lt;link rel="stylesheet" href="style.css"&gt;
+
+&lt;!-- Internal --&gt;
+&lt;style&gt;body{ color:#333; }&lt;/style&gt;
+
+&lt;!-- Inline --&gt;
+&lt;p style="color:red;"&gt;Text&lt;/p&gt;</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hcss2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qcss2" aria-expanded="false" aria-controls="qcss2">
+                    <span class="qline">Q02</span><span>What is the CSS box model?</span>
+                  </button>
+                </h2>
+                <div id="qcss2" class="accordion-collapse collapse" aria-labelledby="hcss2"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>Every element is treated as a rectangular box made up of four layers, from the inside out:</p>
+                    <ul>
+                      <li><strong>Content</strong> &mdash; the actual text or media</li>
+                      <li><strong>Padding</strong> &mdash; space between content and border</li>
+                      <li><strong>Border</strong> &mdash; the edge of the box</li>
+                      <li><strong>Margin</strong> &mdash; space outside the border, separating it from other elements
+                      </li>
+                    </ul>
+                    <p>Setting <code>box-sizing: border-box;</code> makes padding and border count <em>inside</em> the
+                      declared width, which is why most modern stylesheets apply it globally.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hcss3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qcss3" aria-expanded="false" aria-controls="qcss3">
+                    <span class="qline">Q03</span><span>What's the difference between class and id selectors, and
+                      specificity?</span>
+                  </button>
+                </h2>
+                <div id="qcss3" class="accordion-collapse collapse" aria-labelledby="hcss3"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>A class selector (<code>.card</code>) can match many elements; an id selector
+                      (<code>#header</code>) should match only one. In terms of <strong>specificity</strong> &mdash; the
+                      rule CSS uses to decide which style wins when several rules target the same element &mdash; id
+                      selectors are stronger than class selectors, which are stronger than tag selectors like
+                      <code>div</code>.
+                    </p>
+                    <pre>#header{ color:blue; }   /* wins over */
+.card{ color:red; }      /* which wins over */
+div{ color:green; }</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hcss4">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qcss4" aria-expanded="false" aria-controls="qcss4">
+                    <span class="qline">Q04</span><span>What is the difference between relative, absolute, fixed, and
+                      sticky positioning?</span>
+                  </button>
+                </h2>
+                <div id="qcss4" class="accordion-collapse collapse" aria-labelledby="hcss4"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><code>relative</code> &mdash; positioned relative to its own normal position</li>
+                      <li><code>absolute</code> &mdash; removed from normal flow, positioned relative to the nearest
+                        positioned ancestor</li>
+                      <li><code>fixed</code> &mdash; positioned relative to the browser window and stays put when
+                        scrolling</li>
+                      <li><code>sticky</code> &mdash; behaves like <code>relative</code> until a scroll threshold is
+                        reached, then behaves like <code>fixed</code></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hcss5">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qcss5" aria-expanded="false" aria-controls="qcss5">
+                    <span class="qline">Q05</span><span>What is Flexbox and when should you use it?</span>
+                  </button>
+                </h2>
+                <div id="qcss5" class="accordion-collapse collapse" aria-labelledby="hcss5"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>Flexbox is a one-dimensional layout system for arranging items in a row or a column, with easy
+                      control over alignment, spacing and order. It's ideal for navbars, card rows, centering content,
+                      and any layout that flows in a single direction.</p>
+                    <pre>.container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:1rem;
+}</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hcss6">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qcss6" aria-expanded="false" aria-controls="qcss6">
+                    <span class="qline">Q06</span><span>What is CSS Grid and how does it differ from Flexbox?</span>
+                  </button>
+                </h2>
+                <div id="qcss6" class="accordion-collapse collapse" aria-labelledby="hcss6"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>CSS Grid is a <strong>two-dimensional</strong> layout system that controls rows and columns at
+                      the same time, making it ideal for full page layouts and dashboards. Flexbox is best for
+                      one-dimensional arrangements (a single row or column); Grid is best when you need precise control
+                      over both axes together.</p>
+                    <pre>.grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:1.5rem;
+}</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hcss7">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qcss7" aria-expanded="false" aria-controls="qcss7">
+                    <span class="qline">Q07</span><span>What are media queries and why are they important?</span>
+                  </button>
+                </h2>
+                <div id="qcss7" class="accordion-collapse collapse" aria-labelledby="hcss7"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>Media queries let you apply different CSS rules depending on the characteristics of the device
+                      &mdash; most commonly screen width &mdash; so a page can adapt to phones, tablets and desktops.
+                      This is the foundation of <strong>responsive design</strong>.</p>
+                    <pre>@media (max-width: 768px){
+  .nav{ flex-direction: column; }
+}</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hcss8">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qcss8" aria-expanded="false" aria-controls="qcss8">
+                    <span class="qline">Q08</span><span>What is the difference between em, rem, %, and px units?</span>
+                  </button>
+                </h2>
+                <div id="qcss8" class="accordion-collapse collapse" aria-labelledby="hcss8"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><code>px</code> &mdash; a fixed pixel size, doesn't scale with anything</li>
+                      <li><code>em</code> &mdash; relative to the font size of the <em>parent</em> element (can
+                        compound)</li>
+                      <li><code>rem</code> &mdash; relative to the font size of the <em>root</em> (<code>html</code>)
+                        element, which avoids compounding issues</li>
+                      <li><code>%</code> &mdash; relative to the parent's corresponding property, e.g. width</li>
+                    </ul>
+                    <p><code>rem</code> is generally preferred for consistent, predictable spacing and typography.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hcss9">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qcss9" aria-expanded="false" aria-controls="qcss9">
+                    <span class="qline">Q09</span><span>What is the difference between inline, internal, and external
+                      CSS?</span>
+                  </button>
+                </h2>
+                <div id="qcss9" class="accordion-collapse collapse" aria-labelledby="hcss9"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p><strong>Inline</strong> CSS is written directly on an element via the <code>style</code>
+                      attribute and has the highest specificity but is hard to maintain. <strong>Internal</strong> CSS
+                      lives in a <code>&lt;style&gt;</code> block in the document head, scoped to that one page.
+                      <strong>External</strong> CSS lives in a separate <code>.css</code> file linked with
+                      <code>&lt;link&gt;</code>, and is the standard approach since it can be cached and reused across
+                      pages.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hcss10">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qcss10" aria-expanded="false" aria-controls="qcss10">
+                    <span class="qline">Q10</span><span>What is the difference between pseudo-classes and
+                      pseudo-elements?</span>
+                  </button>
+                </h2>
+                <div id="qcss10" class="accordion-collapse collapse" aria-labelledby="hcss10"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>A <strong>pseudo-class</strong> (single colon, <code>:hover</code>, <code>:focus</code>,
+                      <code>:nth-child()</code>) targets an element in a particular state. A
+                      <strong>pseudo-element</strong> (double colon, <code>::before</code>, <code>::after</code>,
+                      <code>::first-line</code>) targets a specific part of an element or inserts generated content.</p>
+                    <pre>a:hover{ color: teal; }
+p::first-line{ font-weight: bold; }</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hcss11">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qcss11" aria-expanded="false" aria-controls="qcss11">
+                    <span class="qline">Q11</span><span>How does the CSS cascade and inheritance work?</span>
+                  </button>
+                </h2>
+                <div id="qcss11" class="accordion-collapse collapse" aria-labelledby="hcss11"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>The <strong>cascade</strong> decides which rule applies when several rules could match the same
+                      element, based on origin, specificity, and source order (later rules win ties).
+                      <strong>Inheritance</strong> means some properties, mostly text-related ones like
+                      <code>color</code> and <code>font-family</code>, are automatically passed down from parent to
+                      child unless overridden. Layout properties like <code>margin</code> and <code>border</code> are
+                      not inherited by default.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hcss12">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qcss12" aria-expanded="false" aria-controls="qcss12">
+                    <span class="qline">Q12</span><span>What is the difference between visibility: hidden and display:
+                      none?</span>
+                  </button>
+                </h2>
+                <div id="qcss12" class="accordion-collapse collapse" aria-labelledby="hcss12"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p><code>display: none</code> removes the element from the layout entirely &mdash; it takes up no
+                      space and is skipped by screen readers. <code>visibility: hidden</code> hides the element visually
+                      but it still occupies its space in the layout.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hcss13">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qcss13" aria-expanded="false" aria-controls="qcss13">
+                    <span class="qline">Q13</span><span>What are CSS custom properties (variables)?</span>
+                  </button>
+                </h2>
+                <div id="qcss13" class="accordion-collapse collapse" aria-labelledby="hcss13"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>Custom properties let you define reusable values with <code>--name</code> syntax and read them
+                      with <code>var()</code>. Unlike preprocessor variables, they are live in the browser and can be
+                      changed at runtime, including per-component via cascading.</p>
+                    <pre>:root{ --brand-color: #8b5cf6; }
+.btn{ background: var(--brand-color); }</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hcss14">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qcss14" aria-expanded="false" aria-controls="qcss14">
+                    <span class="qline">Q14</span><span>What is the difference between transitions and animations in
+                      CSS?</span>
+                  </button>
+                </h2>
+                <div id="qcss14" class="accordion-collapse collapse" aria-labelledby="hcss14"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>A <strong>transition</strong> smoothly interpolates a property between two states, usually
+                      triggered by a state change like <code>:hover</code>. An <strong>animation</strong> uses
+                      <code>@keyframes</code> to define multiple steps and can run automatically, repeat, and control
+                      timing at each stage without needing a trigger.</p>
+                    <pre>.box{ transition: transform .3s ease; }
+.box:hover{ transform: scale(1.05); }
+
+@keyframes pulse{ 50%{ opacity:.5; } }
+.dot{ animation: pulse 1.2s infinite; }</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hcss15">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qcss15" aria-expanded="false" aria-controls="qcss15">
+                    <span class="qline">Q15</span><span>What is the difference between min-width, max-width and width in
+                      responsive design?</span>
+                  </button>
+                </h2>
+                <div id="qcss15" class="accordion-collapse collapse" aria-labelledby="hcss15"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p><code>width</code> sets a fixed target size. <code>max-width</code> lets an element shrink below
+                      that size on smaller screens but never grow past it &mdash; commonly used for responsive images
+                      and containers. <code>min-width</code> prevents an element from shrinking below a certain size,
+                      which can be useful for buttons or form fields that shouldn't get too small to use.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hcss16">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qcss16" aria-expanded="false" aria-controls="qcss16">
+                    <span class="qline">Q16</span><span>What is CSS specificity and how do you calculate it?</span>
+                  </button>
+                </h2>
+                <div id="qcss16" class="accordion-collapse collapse" aria-labelledby="hcss16"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>Specificity is a weight the browser calculates for each selector to resolve conflicts. It's
+                      typically expressed as four parts (inline, IDs, classes/attributes/pseudo-classes,
+                      elements/pseudo-elements) &mdash; more of a higher-value part always beats more of a lower one.
+                    </p>
+                    <pre>#nav .link:hover  &rarr; 0-1-1-1 (1 id, 1 class-level, 1 pseudo)
+.link              &rarr; 0-0-1-0
+a                   &rarr; 0-0-0-1</pre>
+                    <p><code>!important</code> overrides normal specificity entirely and should be used sparingly.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="nm-footer">
+    <div class="container-xl">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <div class="foot-brand mb-2">NM_FullStack<span style="color:var(--brand-2)">_</span></div>
+          <p class="foot-about">A free, no-nonsense reference for learning full stack web development —
+            one topic per file, one concept at a time, from markup to database.</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Frontend</h6>
+          <ul>
+            <li><a class="foot-link" href="html.html" data-topic="html"><span class="lang-dot"></span>HTML</a></li>
+            <li><a class="foot-link" href="css.html" data-topic="css"><span class="lang-dot"></span>CSS</a></li>
+            <li><a class="foot-link" href="javascript.html" data-topic="javascript"><span
+                  class="lang-dot"></span>JavaScript</a></li>
+            <li><a class="foot-link" href="react.html" data-topic="react"><span class="lang-dot"></span>React</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Backend</h6>
+          <ul>
+            <li><a class="foot-link" href="nodejs.html" data-topic="nodejs"><span class="lang-dot"></span>Node.js</a>
+            </li>
+            <li><a class="foot-link" href="mysql.html" data-topic="mysql"><span class="lang-dot"></span>MySQL</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h6>Site</h6>
+          <ul>
+            <li><a class="foot-link" href="index.html"><span class="lang-dot"></span>Home</a></li>
+          </ul>
+          <p class="foot-about mt-3 mb-0">Built with HTML, CSS, JavaScript &amp; Bootstrap 5.
+            Fully responsive across phones, tablets and desktops.</p>
+        </div>
+      </div>
+      <hr>
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center foot-bottom gap-2">
+        <span>&copy; 2026 NM Full Stack. Built for learners, by learners.</span>
+        <span>Frontend <span class="mx-1">&middot;</span> Backend <span class="mx-1">&middot;</span> Database</span>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">&uarr;</button>
+
+  <!-- Bootstrap 5 JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Site script -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

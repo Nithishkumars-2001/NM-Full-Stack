@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>React — Questions &amp; Answers · NM Full Stack</title>
+  <meta name="description"
+    content="Learn React fundamentals — components, JSX, props, state, hooks and the virtual DOM.">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%238b5cf6%22/><text x=%2250%22 y=%2266%22 font-size=%2255%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22monospace%22>N</text></svg>">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Site stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-topic="react">
+
+  <header>
+    <nav class="navbar navbar-expand-lg nm-navbar fixed-top">
+      <div class="container-xl">
+        <a class="navbar-brand nm-brand" href="index.html">NM_FullStack<span class="cursor">_</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nmNav"
+          aria-controls="nmNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nmNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1">
+            <li class="nav-item"><a class="nav-link" href="index.html"><span class="lang-dot"></span>Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="html.html" data-topic="html"><span
+                  class="lang-dot"></span>HTML</a></li>
+            <li class="nav-item"><a class="nav-link" href="css.html" data-topic="css"><span
+                  class="lang-dot"></span>CSS</a></li>
+            <li class="nav-item"><a class="nav-link" href="javascript.html" data-topic="javascript"><span
+                  class="lang-dot"></span>JavaScript</a></li>
+            <li class="nav-item"><a class="nav-link active" href="react.html" data-topic="react"><span
+                  class="lang-dot"></span>React</a></li>
+            <li class="nav-item"><a class="nav-link" href="mysql.html" data-topic="mysql"><span
+                  class="lang-dot"></span>MySQL</a></li>
+            <li class="nav-item"><a class="nav-link" href="nodejs.html" data-topic="nodejs"><span
+                  class="lang-dot"></span>Node.js</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div style="height:70px;" aria-hidden="true"></div>
+
+  <main>
+
+    <section class="topic-hero" data-topic="react">
+      <div class="container-xl">
+        <span class="topic-badge"><span class="lang-dot"></span>Frontend &middot; UI Library</span>
+        <div class="accent-bar"></div>
+        <h1>React</h1>
+        <p class="lead">React is a JavaScript library for building fast, component-based user interfaces. This file
+          introduces the concepts you need to build a real React app.</p>
+      </div>
+    </section>
+
+    <section class="pb-5" data-topic="react">
+      <div class="container-xl">
+        <div class="editor-window mb-4">
+          <div class="tab-bar">
+            <div class="tab-dots"><span></span><span></span><span></span></div>
+            <div class="tab-chip">App.jsx</div>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 order-2 order-lg-1">
+            <div class="outline-card">
+              <h6>On this page &middot; 16 questions</h6>
+              <a class="outline-link" href="#qreact1"><span class="ln">Q01</span><span>What is React and why is it
+                  used?</span></a><a class="outline-link" href="#qreact2"><span class="ln">Q02</span><span>What is
+                  JSX?</span></a><a class="outline-link" href="#qreact3"><span class="ln">Q03</span><span>What is the
+                  difference between a component and props?</span></a><a class="outline-link" href="#qreact4"><span
+                  class="ln">Q04</span><span>What is state and how is it different from props?</span></a><a
+                class="outline-link" href="#qreact5"><span class="ln">Q05</span><span>What are React Hooks? Explain
+                  useState and useEffect.</span></a><a class="outline-link" href="#qreact6"><span
+                  class="ln">Q06</span><span>What is the virtual DOM?</span></a><a class="outline-link"
+                href="#qreact7"><span class="ln">Q07</span><span>How does React handle conditional rendering and
+                  lists?</span></a><a class="outline-link" href="#qreact8"><span class="ln">Q08</span><span>What is
+                  component lifecycle / how do hooks replace lifecycle methods?</span></a>
+              <a class="outline-link" href="#qreact9"><span class="ln">Q09</span><span>What is the difference between
+                  controlled and uncontrolled components?</span></a><a class="outline-link" href="#qreact10"><span
+                  class="ln">Q10</span><span>What is prop drilling and how can it be avoided?</span></a><a
+                class="outline-link" href="#qreact11"><span class="ln">Q11</span><span>What is the React Context API
+                  used for?</span></a><a class="outline-link" href="#qreact12"><span class="ln">Q12</span><span>What is
+                  the useRef hook used for?</span></a><a class="outline-link" href="#qreact13"><span
+                  class="ln">Q13</span><span>What are keys in React lists and why do they matter?</span></a><a
+                class="outline-link" href="#qreact14"><span class="ln">Q14</span><span>What is React Router used
+                  for?</span></a><a class="outline-link" href="#qreact15"><span class="ln">Q15</span><span>How do you
+                  fetch data from an API in React?</span></a><a class="outline-link" href="#qreact16"><span
+                  class="ln">Q16</span><span>What is the difference between a single-page application (SPA) and a
+                  traditional multi-page site?</span></a>
+              <ul class="meta-list">
+                <li><span>Layer</span><span>Frontend / UI Library</span></li>
+                <li><span>Difficulty</span><span>Intermediate</span></li>
+                <li><span>Pairs with</span><span>JavaScript, Node.js</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-8 order-1 order-lg-2">
+            <div class="accordion qa-accordion" id="qaAccordion">
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hreact1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#qreact1"
+                    aria-expanded="true" aria-controls="qreact1">
+                    <span class="qline">Q01</span><span>What is React and why is it used?</span>
+                  </button>
+                </h2>
+                <div id="qreact1" class="accordion-collapse collapse show" aria-labelledby="hreact1"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>React is a JavaScript library, created by Meta, for building user interfaces out of small,
+                      reusable <strong>components</strong>. Instead of manually updating the DOM, developers describe
+                      what the UI should look like for a given state, and React efficiently updates the page to match.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hreact2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qreact2" aria-expanded="false" aria-controls="qreact2">
+                    <span class="qline">Q02</span><span>What is JSX?</span>
+                  </button>
+                </h2>
+                <div id="qreact2" class="accordion-collapse collapse" aria-labelledby="hreact2"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>JSX is a syntax extension that lets you write HTML-like markup directly inside JavaScript. It
+                      gets compiled into regular <code>React.createElement()</code> calls behind the scenes.</p>
+                    <pre>function Welcome(){
+  return &lt;h1&gt;Hello, NM Full Stack!&lt;/h1&gt;;
+}</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hreact3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qreact3" aria-expanded="false" aria-controls="qreact3">
+                    <span class="qline">Q03</span><span>What is the difference between a component and props?</span>
+                  </button>
+                </h2>
+                <div id="qreact3" class="accordion-collapse collapse" aria-labelledby="hreact3"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>A <strong>component</strong> is a reusable, self-contained piece of UI, written as a function (or
+                      class) that returns JSX. <strong>Props</strong> (properties) are read-only inputs passed into a
+                      component from its parent, similar to function arguments, letting the same component render
+                      differently based on the data it receives.</p>
+                    <pre>function Greeting({ name }){
+  return &lt;p&gt;Hello, {name}!&lt;/p&gt;;
+}
+
+&lt;Greeting name="Aditi" /&gt;</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hreact4">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qreact4" aria-expanded="false" aria-controls="qreact4">
+                    <span class="qline">Q04</span><span>What is state and how is it different from props?</span>
+                  </button>
+                </h2>
+                <div id="qreact4" class="accordion-collapse collapse" aria-labelledby="hreact4"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p><strong>State</strong> is data a component manages internally and can change over time, usually
+                      in response to user interaction. Unlike props, which are passed in from outside and read-only,
+                      state is owned and updated by the component itself using the <code>useState</code> hook.</p>
+                    <pre>const [count, setCount] = useState(0);</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hreact5">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qreact5" aria-expanded="false" aria-controls="qreact5">
+                    <span class="qline">Q05</span><span>What are React Hooks? Explain useState and useEffect.</span>
+                  </button>
+                </h2>
+                <div id="qreact5" class="accordion-collapse collapse" aria-labelledby="hreact5"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>Hooks are functions that let function components use React features that used to require class
+                      components.</p>
+                    <ul>
+                      <li><code>useState</code> &mdash; adds local state to a component</li>
+                      <li><code>useEffect</code> &mdash; runs side effects (data fetching, subscriptions, timers) after
+                        render, and can clean up after itself</li>
+                    </ul>
+                    <pre>useEffect(() => {
+  fetch('/api/data').then(r => r.json()).then(setData);
+}, []); // empty array = run once on mount</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hreact6">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qreact6" aria-expanded="false" aria-controls="qreact6">
+                    <span class="qline">Q06</span><span>What is the virtual DOM?</span>
+                  </button>
+                </h2>
+                <div id="qreact6" class="accordion-collapse collapse" aria-labelledby="hreact6"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>The virtual DOM is a lightweight, in-memory copy of the real DOM. When state changes, React
+                      builds a new virtual DOM tree, compares ("diffs") it against the previous one, and updates only
+                      the parts of the real DOM that actually changed &mdash; which is far faster than re-rendering
+                      everything.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hreact7">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qreact7" aria-expanded="false" aria-controls="qreact7">
+                    <span class="qline">Q07</span><span>How does React handle conditional rendering and lists?</span>
+                  </button>
+                </h2>
+                <div id="qreact7" class="accordion-collapse collapse" aria-labelledby="hreact7"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>Conditional rendering typically uses standard JavaScript operators inside JSX, such as ternaries
+                      or <code>&amp;&amp;</code>. Lists are rendered with <code>.map()</code>, and each item needs a
+                      unique <code>key</code> prop so React can track it efficiently.</p>
+                    <pre>{isLoggedIn ? &lt;Dashboard /&gt; : &lt;Login /&gt;}
+
+{users.map(u =&gt; &lt;li key={u.id}&gt;{u.name}&lt;/li&gt;)}</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hreact8">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qreact8" aria-expanded="false" aria-controls="qreact8">
+                    <span class="qline">Q08</span><span>What is component lifecycle / how do hooks replace lifecycle
+                      methods?</span>
+                  </button>
+                </h2>
+                <div id="qreact8" class="accordion-collapse collapse" aria-labelledby="hreact8"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>Class components had lifecycle methods like <code>componentDidMount</code>,
+                      <code>componentDidUpdate</code> and <code>componentWillUnmount</code>. In function components,
+                      <code>useEffect</code> covers all three: code in the effect body runs after mount/update, and a
+                      returned function runs as cleanup before unmount or before the effect re-runs.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hreact9">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qreact9" aria-expanded="false" aria-controls="qreact9">
+                    <span class="qline">Q09</span><span>What is the difference between controlled and uncontrolled
+                      components?</span>
+                  </button>
+                </h2>
+                <div id="qreact9" class="accordion-collapse collapse" aria-labelledby="hreact9"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>In a <strong>controlled</strong> component, form input values are driven entirely by React state
+                      &mdash; every keystroke updates state via <code>onChange</code>. In an
+                      <strong>uncontrolled</strong> component, the DOM itself keeps track of the value, and React reads
+                      it on demand using a <code>ref</code>. Controlled components are the more common, predictable
+                      pattern.</p>
+                    <pre>const [value, setValue] = useState('');
+&lt;input value={value} onChange={e =&gt; setValue(e.target.value)} /&gt;</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hreact10">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qreact10" aria-expanded="false" aria-controls="qreact10">
+                    <span class="qline">Q10</span><span>What is prop drilling and how can it be avoided?</span>
+                  </button>
+                </h2>
+                <div id="qreact10" class="accordion-collapse collapse" aria-labelledby="hreact10"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>Prop drilling happens when data has to be passed down through several layers of components that
+                      don't need it themselves, just to reach a deeply nested child. It can be avoided using the
+                      <strong>Context API</strong>, or a state management library, to make data available directly to
+                      any component that needs it.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hreact11">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qreact11" aria-expanded="false" aria-controls="qreact11">
+                    <span class="qline">Q11</span><span>What is the React Context API used for?</span>
+                  </button>
+                </h2>
+                <div id="qreact11" class="accordion-collapse collapse" aria-labelledby="hreact11"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>Context lets you share values (theme, logged-in user, language) across a component tree without
+                      manually passing props at every level. A <code>Provider</code> supplies the value, and any
+                      descendant can read it with <code>useContext</code>.</p>
+                    <pre>const ThemeContext = createContext('light');
+
+function Toolbar(){
+  const theme = useContext(ThemeContext);
+  return &lt;div className={theme}&gt;...&lt;/div&gt;;
+}</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hreact12">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qreact12" aria-expanded="false" aria-controls="qreact12">
+                    <span class="qline">Q12</span><span>What is the useRef hook used for?</span>
+                  </button>
+                </h2>
+                <div id="qreact12" class="accordion-collapse collapse" aria-labelledby="hreact12"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p><code>useRef</code> creates a mutable value that persists across renders without triggering a
+                      re-render when it changes. It's most commonly used to directly reference a DOM element, e.g. to
+                      focus an input, or to store a value like a timer ID between renders.</p>
+                    <pre>const inputRef = useRef(null);
+&lt;input ref={inputRef} /&gt;
+&lt;button onClick={() =&gt; inputRef.current.focus()}&gt;Focus&lt;/button&gt;</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hreact13">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qreact13" aria-expanded="false" aria-controls="qreact13">
+                    <span class="qline">Q13</span><span>What are keys in React lists and why do they matter?</span>
+                  </button>
+                </h2>
+                <div id="qreact13" class="accordion-collapse collapse" aria-labelledby="hreact13"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>A <code>key</code> is a stable, unique identifier given to each item rendered from a list. React
+                      uses keys to tell items apart between renders, so it can update, reorder or remove exactly the
+                      right DOM nodes instead of re-rendering the whole list. Using array index as a key is discouraged
+                      if the list can be reordered or filtered.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hreact14">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qreact14" aria-expanded="false" aria-controls="qreact14">
+                    <span class="qline">Q14</span><span>What is React Router used for?</span>
+                  </button>
+                </h2>
+                <div id="qreact14" class="accordion-collapse collapse" aria-labelledby="hreact14"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>React Router is the standard library for client-side routing in React &mdash; rendering different
+                      components based on the URL without a full page reload, which is how single-page applications get
+                      multiple &ldquo;pages&rdquo;.</p>
+                    <pre>&lt;Routes&gt;
+  &lt;Route path="/" element={&lt;Home /&gt;} /&gt;
+  &lt;Route path="/about" element={&lt;About /&gt;} /&gt;
+&lt;/Routes&gt;</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hreact15">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qreact15" aria-expanded="false" aria-controls="qreact15">
+                    <span class="qline">Q15</span><span>How do you fetch data from an API in React?</span>
+                  </button>
+                </h2>
+                <div id="qreact15" class="accordion-collapse collapse" aria-labelledby="hreact15"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>Data fetching is typically done inside <code>useEffect</code> so it runs after the component
+                      mounts, with the result stored in state so the UI re-renders when it arrives.</p>
+                    <pre>const [users, setUsers] = useState([]);
+
+useEffect(() =&gt; {
+  fetch('/api/users')
+    .then(res =&gt; res.json())
+    .then(setUsers);
+}, []);</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hreact16">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qreact16" aria-expanded="false" aria-controls="qreact16">
+                    <span class="qline">Q16</span><span>What is the difference between a single-page application (SPA)
+                      and a traditional multi-page site?</span>
+                  </button>
+                </h2>
+                <div id="qreact16" class="accordion-collapse collapse" aria-labelledby="hreact16"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>A traditional multi-page site requests a fresh HTML page from the server on every navigation. A
+                      <strong>single-page application</strong>, like a typical React app, loads once and then updates
+                      the page dynamically with JavaScript as the user navigates, only fetching data (not full HTML)
+                      from the server &mdash; giving a faster, app-like feel.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="nm-footer">
+    <div class="container-xl">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <div class="foot-brand mb-2">NM_FullStack<span style="color:var(--brand-2)">_</span></div>
+          <p class="foot-about">A free, no-nonsense reference for learning full stack web development —
+            one topic per file, one concept at a time, from markup to database.</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Frontend</h6>
+          <ul>
+            <li><a class="foot-link" href="html.html" data-topic="html"><span class="lang-dot"></span>HTML</a></li>
+            <li><a class="foot-link" href="css.html" data-topic="css"><span class="lang-dot"></span>CSS</a></li>
+            <li><a class="foot-link" href="javascript.html" data-topic="javascript"><span
+                  class="lang-dot"></span>JavaScript</a></li>
+            <li><a class="foot-link" href="react.html" data-topic="react"><span class="lang-dot"></span>React</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Backend</h6>
+          <ul>
+            <li><a class="foot-link" href="nodejs.html" data-topic="nodejs"><span class="lang-dot"></span>Node.js</a>
+            </li>
+            <li><a class="foot-link" href="mysql.html" data-topic="mysql"><span class="lang-dot"></span>MySQL</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h6>Site</h6>
+          <ul>
+            <li><a class="foot-link" href="index.html"><span class="lang-dot"></span>Home</a></li>
+          </ul>
+          <p class="foot-about mt-3 mb-0">Built with HTML, CSS, JavaScript &amp; Bootstrap 5.
+            Fully responsive across phones, tablets and desktops.</p>
+        </div>
+      </div>
+      <hr>
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center foot-bottom gap-2">
+        <span>&copy; 2026 NM Full Stack. Built for learners, by learners.</span>
+        <span>Frontend <span class="mx-1">&middot;</span> Backend <span class="mx-1">&middot;</span> Database</span>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">&uarr;</button>
+
+  <!-- Bootstrap 5 JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Site script -->
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

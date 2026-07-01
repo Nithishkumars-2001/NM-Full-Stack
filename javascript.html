@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>JavaScript — Questions &amp; Answers · NM Full Stack</title>
+  <meta name="description"
+    content="Learn JavaScript fundamentals — variables, data types, functions, the DOM, events and asynchronous programming.">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%238b5cf6%22/><text x=%2250%22 y=%2266%22 font-size=%2255%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22monospace%22>N</text></svg>">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Site stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-topic="javascript">
+
+  <header>
+    <nav class="navbar navbar-expand-lg nm-navbar fixed-top">
+      <div class="container-xl">
+        <a class="navbar-brand nm-brand" href="index.html">NM_FullStack<span class="cursor">_</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nmNav"
+          aria-controls="nmNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nmNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1">
+            <li class="nav-item"><a class="nav-link" href="index.html"><span class="lang-dot"></span>Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="html.html" data-topic="html"><span
+                  class="lang-dot"></span>HTML</a></li>
+            <li class="nav-item"><a class="nav-link" href="css.html" data-topic="css"><span
+                  class="lang-dot"></span>CSS</a></li>
+            <li class="nav-item"><a class="nav-link active" href="javascript.html" data-topic="javascript"><span
+                  class="lang-dot"></span>JavaScript</a></li>
+            <li class="nav-item"><a class="nav-link" href="react.html" data-topic="react"><span
+                  class="lang-dot"></span>React</a></li>
+            <li class="nav-item"><a class="nav-link" href="mysql.html" data-topic="mysql"><span
+                  class="lang-dot"></span>MySQL</a></li>
+            <li class="nav-item"><a class="nav-link" href="nodejs.html" data-topic="nodejs"><span
+                  class="lang-dot"></span>Node.js</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div style="height:70px;" aria-hidden="true"></div>
+
+  <main>
+
+    <section class="topic-hero" data-topic="javascript">
+      <div class="container-xl">
+        <span class="topic-badge"><span class="lang-dot"></span>Frontend &middot; Programming Language</span>
+        <div class="accent-bar"></div>
+        <h1>JavaScript</h1>
+        <p class="lead">JavaScript brings web pages to life. This file covers the core language features and browser
+          APIs every full stack developer relies on.</p>
+      </div>
+    </section>
+
+    <section class="pb-5" data-topic="javascript">
+      <div class="container-xl">
+        <div class="editor-window mb-4">
+          <div class="tab-bar">
+            <div class="tab-dots"><span></span><span></span><span></span></div>
+            <div class="tab-chip">app.js</div>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 order-2 order-lg-1">
+            <div class="outline-card">
+              <h6>On this page &middot; 16 questions</h6>
+              <a class="outline-link" href="#qjavascript1"><span class="ln">Q01</span><span>What is JavaScript and where
+                  does it run?</span></a><a class="outline-link" href="#qjavascript2"><span
+                  class="ln">Q02</span><span>What's the difference between var, let, and const?</span></a><a
+                class="outline-link" href="#qjavascript3"><span class="ln">Q03</span><span>What are the different data
+                  types in JavaScript?</span></a><a class="outline-link" href="#qjavascript4"><span
+                  class="ln">Q04</span><span>What is the difference between == and ===?</span></a><a
+                class="outline-link" href="#qjavascript5"><span class="ln">Q05</span><span>What are functions, arrow
+                  functions, and how do they differ?</span></a><a class="outline-link" href="#qjavascript6"><span
+                  class="ln">Q06</span><span>What is the DOM and how does JavaScript manipulate it?</span></a><a
+                class="outline-link" href="#qjavascript7"><span class="ln">Q07</span><span>What are JavaScript events
+                  and event listeners?</span></a><a class="outline-link" href="#qjavascript8"><span
+                  class="ln">Q08</span><span>What is asynchronous JavaScript (callbacks, promises,
+                  async/await)?</span></a>
+              <a class="outline-link" href="#qjavascript9"><span class="ln">Q09</span><span>What is hoisting in
+                  JavaScript?</span></a><a class="outline-link" href="#qjavascript10"><span
+                  class="ln">Q10</span><span>What is closures in JavaScript?</span></a><a class="outline-link"
+                href="#qjavascript11"><span class="ln">Q11</span><span>What is the difference between null and
+                  undefined?</span></a><a class="outline-link" href="#qjavascript12"><span
+                  class="ln">Q12</span><span>What are template literals?</span></a><a class="outline-link"
+                href="#qjavascript13"><span class="ln">Q13</span><span>What is array and object
+                  destructuring?</span></a><a class="outline-link" href="#qjavascript14"><span
+                  class="ln">Q14</span><span>What is the spread and rest operator (...)?</span></a><a
+                class="outline-link" href="#qjavascript15"><span class="ln">Q15</span><span>What is the difference
+                  between map, filter and reduce?</span></a><a class="outline-link" href="#qjavascript16"><span
+                  class="ln">Q16</span><span>What is the difference between synchronous and asynchronous JavaScript
+                  execution order?</span></a>
+              <ul class="meta-list">
+                <li><span>Layer</span><span>Frontend / Behaviour</span></li>
+                <li><span>Difficulty</span><span>Beginner &ndash; Intermediate</span></li>
+                <li><span>Pairs with</span><span>HTML, CSS, React</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-8 order-1 order-lg-2">
+            <div class="accordion qa-accordion" id="qaAccordion">
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hjavascript1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qjavascript1" aria-expanded="true" aria-controls="qjavascript1">
+                    <span class="qline">Q01</span><span>What is JavaScript and where does it run?</span>
+                  </button>
+                </h2>
+                <div id="qjavascript1" class="accordion-collapse collapse show" aria-labelledby="hjavascript1"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>JavaScript is a lightweight, interpreted programming language originally built to make web pages
+                      interactive. It runs natively inside every modern web browser, and &mdash; thanks to runtimes like
+                      Node.js &mdash; can also run on servers, making it usable across the entire stack.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hjavascript2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qjavascript2" aria-expanded="false" aria-controls="qjavascript2">
+                    <span class="qline">Q02</span><span>What's the difference between var, let, and const?</span>
+                  </button>
+                </h2>
+                <div id="qjavascript2" class="accordion-collapse collapse" aria-labelledby="hjavascript2"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><code>var</code> &mdash; function-scoped, can be redeclared and updated; largely avoided in
+                        modern code</li>
+                      <li><code>let</code> &mdash; block-scoped, can be updated but not redeclared in the same scope
+                      </li>
+                      <li><code>const</code> &mdash; block-scoped, cannot be reassigned after declaration (though
+                        objects/arrays it holds can still be mutated)</li>
+                    </ul>
+                    <pre>let count = 1;
+count = 2;        // OK
+
+const name = "NM";
+name = "X";        // Error</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hjavascript3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qjavascript3" aria-expanded="false" aria-controls="qjavascript3">
+                    <span class="qline">Q03</span><span>What are the different data types in JavaScript?</span>
+                  </button>
+                </h2>
+                <div id="qjavascript3" class="accordion-collapse collapse" aria-labelledby="hjavascript3"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>JavaScript has primitive types &mdash; <code>String</code>, <code>Number</code>,
+                      <code>Boolean</code>, <code>null</code>, <code>undefined</code>, <code>Symbol</code>,
+                      <code>BigInt</code> &mdash; and one reference type, <code>Object</code> (which includes arrays and
+                      functions). The <code>typeof</code> operator checks a value's type at runtime.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hjavascript4">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qjavascript4" aria-expanded="false" aria-controls="qjavascript4">
+                    <span class="qline">Q04</span><span>What is the difference between == and ===?</span>
+                  </button>
+                </h2>
+                <div id="qjavascript4" class="accordion-collapse collapse" aria-labelledby="hjavascript4"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p><code>==</code> is the <strong>loose equality</strong> operator: it converts both values to the
+                      same type before comparing. <code>===</code> is the <strong>strict equality</strong> operator: it
+                      compares both value and type without any conversion, and is almost always the safer choice.</p>
+                    <pre>'5' == 5    // true  (type coerced)
+'5' === 5   // false (different types)</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hjavascript5">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qjavascript5" aria-expanded="false" aria-controls="qjavascript5">
+                    <span class="qline">Q05</span><span>What are functions, arrow functions, and how do they
+                      differ?</span>
+                  </button>
+                </h2>
+                <div id="qjavascript5" class="accordion-collapse collapse" aria-labelledby="hjavascript5"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>A function is a reusable block of code. Arrow functions are a shorter syntax introduced in ES6
+                      that also handle the <code>this</code> keyword differently &mdash; they don't have their own
+                      <code>this</code>, instead inheriting it from the surrounding scope, which is especially useful
+                      inside callbacks.
+                    </p>
+                    <pre>function add(a, b){ return a + b; }
+
+const add2 = (a, b) => a + b;</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hjavascript6">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qjavascript6" aria-expanded="false" aria-controls="qjavascript6">
+                    <span class="qline">Q06</span><span>What is the DOM and how does JavaScript manipulate it?</span>
+                  </button>
+                </h2>
+                <div id="qjavascript6" class="accordion-collapse collapse" aria-labelledby="hjavascript6"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>The DOM (Document Object Model) is the browser's in-memory, tree-like representation of the HTML
+                      page. JavaScript can read and change it &mdash; adding, removing or updating elements &mdash;
+                      which is how a page updates without a full reload.</p>
+                    <pre>const el = document.querySelector('#title');
+el.textContent = 'Updated!';
+el.classList.add('highlight');</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hjavascript7">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qjavascript7" aria-expanded="false" aria-controls="qjavascript7">
+                    <span class="qline">Q07</span><span>What are JavaScript events and event listeners?</span>
+                  </button>
+                </h2>
+                <div id="qjavascript7" class="accordion-collapse collapse" aria-labelledby="hjavascript7"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>Events are actions the browser can detect &mdash; a click, a keypress, a form submit, a page
+                      load. An event listener is a function registered to run automatically when a specific event
+                      happens on a specific element.</p>
+                    <pre>document.querySelector('button')
+  .addEventListener('click', () => {
+    alert('Button clicked!');
+  });</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hjavascript8">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qjavascript8" aria-expanded="false" aria-controls="qjavascript8">
+                    <span class="qline">Q08</span><span>What is asynchronous JavaScript (callbacks, promises,
+                      async/await)?</span>
+                  </button>
+                </h2>
+                <div id="qjavascript8" class="accordion-collapse collapse" aria-labelledby="hjavascript8"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>JavaScript is single-threaded, so long-running tasks like network requests are handled
+                      <strong>asynchronously</strong> so they don't block the rest of the page.
+                    </p>
+                    <ul>
+                      <li><strong>Callbacks</strong> &mdash; functions passed in to run later, can lead to deeply nested
+                        "callback hell"</li>
+                      <li><strong>Promises</strong> &mdash; objects representing a future value, with
+                        <code>.then()</code> / <code>.catch()</code>
+                      </li>
+                      <li><strong>async/await</strong> &mdash; syntax built on promises that lets asynchronous code read
+                        like synchronous code</li>
+                    </ul>
+                    <pre>async function getUser(){
+  const res = await fetch('/api/user');
+  const data = await res.json();
+  return data;
+}</pre>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hjavascript9">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qjavascript9" aria-expanded="false" aria-controls="qjavascript9">
+                    <span class="qline">Q09</span><span>What is hoisting in JavaScript?</span>
+                  </button>
+                </h2>
+                <div id="qjavascript9" class="accordion-collapse collapse" aria-labelledby="hjavascript9"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>Hoisting is JavaScript's behaviour of moving variable and function <em>declarations</em> to the
+                      top of their scope during compilation, before code runs. <code>var</code> declarations are hoisted
+                      and initialised as <code>undefined</code>; <code>let</code> and <code>const</code> are hoisted but
+                      stay in a &ldquo;temporal dead zone&rdquo; until their line runs, so accessing them earlier throws
+                      an error.</p>
+                    <pre>console.log(x); // undefined, not an error
+var x = 5;</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hjavascript10">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qjavascript10" aria-expanded="false" aria-controls="qjavascript10">
+                    <span class="qline">Q10</span><span>What is closures in JavaScript?</span>
+                  </button>
+                </h2>
+                <div id="qjavascript10" class="accordion-collapse collapse" aria-labelledby="hjavascript10"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>A closure is formed when a function &ldquo;remembers&rdquo; the variables from the scope it was
+                      created in, even after that outer function has finished running. Closures are the basis for
+                      private state and things like counters or memoized functions.</p>
+                    <pre>function counter(){
+  let count = 0;
+  return () =&gt; ++count;
+}
+const inc = counter();
+inc(); // 1
+inc(); // 2</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hjavascript11">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qjavascript11" aria-expanded="false" aria-controls="qjavascript11">
+                    <span class="qline">Q11</span><span>What is the difference between null and undefined?</span>
+                  </button>
+                </h2>
+                <div id="qjavascript11" class="accordion-collapse collapse" aria-labelledby="hjavascript11"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p><code>undefined</code> means a variable has been declared but has not yet been assigned a value,
+                      or a function returned nothing. <code>null</code> is an intentional assignment representing
+                      &ldquo;no value&rdquo;, explicitly set by the developer. <code>typeof undefined</code> is
+                      <code>'undefined'</code>, while <code>typeof null</code> is (confusingly) <code>'object'</code>, a
+                      long-standing quirk of the language.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hjavascript12">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qjavascript12" aria-expanded="false" aria-controls="qjavascript12">
+                    <span class="qline">Q12</span><span>What are template literals?</span>
+                  </button>
+                </h2>
+                <div id="qjavascript12" class="accordion-collapse collapse" aria-labelledby="hjavascript12"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>Template literals use backticks instead of quotes and support embedded expressions with
+                      <code>${ ... }</code> as well as multi-line strings, making string building far cleaner than
+                      concatenation.</p>
+                    <pre>const name = 'NM';
+const msg = `Hello, ${name}!
+Welcome to Full Stack.`;</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hjavascript13">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qjavascript13" aria-expanded="false" aria-controls="qjavascript13">
+                    <span class="qline">Q13</span><span>What is array and object destructuring?</span>
+                  </button>
+                </h2>
+                <div id="qjavascript13" class="accordion-collapse collapse" aria-labelledby="hjavascript13"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>Destructuring lets you unpack values from arrays or properties from objects into individual
+                      variables in one concise statement.</p>
+                    <pre>const [first, second] = [10, 20];
+const { name, age } = { name: 'Aditi', age: 22 };</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hjavascript14">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qjavascript14" aria-expanded="false" aria-controls="qjavascript14">
+                    <span class="qline">Q14</span><span>What is the spread and rest operator (...)?</span>
+                  </button>
+                </h2>
+                <div id="qjavascript14" class="accordion-collapse collapse" aria-labelledby="hjavascript14"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>The same <code>...</code> syntax does two related jobs. <strong>Spread</strong> expands an array
+                      or object into individual elements, useful for copying or merging. <strong>Rest</strong> collects
+                      multiple arguments or remaining items into a single array.</p>
+                    <pre>const merged = { ...obj1, ...obj2 }; // spread
+
+function sum(...nums){                // rest
+  return nums.reduce((a,b)=&gt;a+b, 0);
+}</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hjavascript15">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qjavascript15" aria-expanded="false" aria-controls="qjavascript15">
+                    <span class="qline">Q15</span><span>What is the difference between map, filter and reduce?</span>
+                  </button>
+                </h2>
+                <div id="qjavascript15" class="accordion-collapse collapse" aria-labelledby="hjavascript15"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><code>map()</code> &mdash; transforms every item and returns a new array of the same length
+                      </li>
+                      <li><code>filter()</code> &mdash; returns a new array containing only items that pass a test</li>
+                      <li><code>reduce()</code> &mdash; combines every item into a single accumulated value</li>
+                    </ul>
+                    <pre>const nums = [1,2,3,4];
+nums.map(n =&gt; n*2);            // [2,4,6,8]
+nums.filter(n =&gt; n % 2 === 0); // [2,4]
+nums.reduce((sum,n)=&gt;sum+n,0); // 10</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hjavascript16">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qjavascript16" aria-expanded="false" aria-controls="qjavascript16">
+                    <span class="qline">Q16</span><span>What is the difference between synchronous and asynchronous
+                      JavaScript execution order?</span>
+                  </button>
+                </h2>
+                <div id="qjavascript16" class="accordion-collapse collapse" aria-labelledby="hjavascript16"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>JavaScript runs synchronous code first, top to bottom. Asynchronous work (timers, promises,
+                      network calls) is queued and only runs once the current synchronous code has finished, via the
+                      event loop &mdash; microtasks (promises) run before macrotasks (like <code>setTimeout</code>).</p>
+                    <pre>console.log('1');
+setTimeout(()=&gt;console.log('2'), 0);
+Promise.resolve().then(()=&gt;console.log('3'));
+console.log('4');
+// Output: 1, 4, 3, 2</pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="nm-footer">
+    <div class="container-xl">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <div class="foot-brand mb-2">NM_FullStack<span style="color:var(--brand-2)">_</span></div>
+          <p class="foot-about">A free, no-nonsense reference for learning full stack web development —
+            one topic per file, one concept at a time, from markup to database.</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Frontend</h6>
+          <ul>
+            <li><a class="foot-link" href="html.html" data-topic="html"><span class="lang-dot"></span>HTML</a></li>
+            <li><a class="foot-link" href="css.html" data-topic="css"><span class="lang-dot"></span>CSS</a></li>
+            <li><a class="foot-link" href="javascript.html" data-topic="javascript"><span
+                  class="lang-dot"></span>JavaScript</a></li>
+            <li><a class="foot-link" href="react.html" data-topic="react"><span class="lang-dot"></span>React</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Backend</h6>
+          <ul>
+            <li><a class="foot-link" href="nodejs.html" data-topic="nodejs"><span class="lang-dot"></span>Node.js</a>
+            </li>
+            <li><a class="foot-link" href="mysql.html" data-topic="mysql"><span class="lang-dot"></span>MySQL</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h6>Site</h6>
+          <ul>
+            <li><a class="foot-link" href="index.html"><span class="lang-dot"></span>Home</a></li>
+          </ul>
+          <p class="foot-about mt-3 mb-0">Built with HTML, CSS, JavaScript &amp; Bootstrap 5.
+            Fully responsive across phones, tablets and desktops.</p>
+        </div>
+      </div>
+      <hr>
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center foot-bottom gap-2">
+        <span>&copy; 2026 NM Full Stack. Built for learners, by learners.</span>
+        <span>Frontend <span class="mx-1">&middot;</span> Backend <span class="mx-1">&middot;</span> Database</span>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">&uarr;</button>
+
+  <!-- Bootstrap 5 JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Site script -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

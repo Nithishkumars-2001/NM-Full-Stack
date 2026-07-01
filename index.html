@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Home — Learn Full Stack Web Development · NM Full Stack</title>
+  <meta name="description"
+    content="NM Full Stack is a free, question-and-answer style reference for learning HTML, CSS, JavaScript, React, Node.js and MySQL — one topic per page.">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%238b5cf6%22/><text x=%2250%22 y=%2266%22 font-size=%2255%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22monospace%22>N</text></svg>">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Site stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-topic="index">
+
+  <header>
+    <nav class="navbar navbar-expand-lg nm-navbar fixed-top">
+      <div class="container-xl">
+        <a class="navbar-brand nm-brand" href="index.html">NM_FullStack<span class="cursor">_</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nmNav"
+          aria-controls="nmNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nmNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1">
+            <li class="nav-item"><a class="nav-link active" href="index.html"><span class="lang-dot"></span>Home</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="html.html" data-topic="html"><span
+                  class="lang-dot"></span>HTML</a></li>
+            <li class="nav-item"><a class="nav-link" href="css.html" data-topic="css"><span
+                  class="lang-dot"></span>CSS</a></li>
+            <li class="nav-item"><a class="nav-link" href="javascript.html" data-topic="javascript"><span
+                  class="lang-dot"></span>JavaScript</a></li>
+            <li class="nav-item"><a class="nav-link" href="react.html" data-topic="react"><span
+                  class="lang-dot"></span>React</a></li>
+            <li class="nav-item"><a class="nav-link" href="mysql.html" data-topic="mysql"><span
+                  class="lang-dot"></span>MySQL</a></li>
+            <li class="nav-item"><a class="nav-link" href="nodejs.html" data-topic="nodejs"><span
+                  class="lang-dot"></span>Node.js</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div style="height:70px;" aria-hidden="true"></div>
+
+  <main>
+
+    <section class="hero-home">
+      <div class="container-xl">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <span class="kicker">// Full Stack Development, one file at a time</span>
+            <h1>Learn the full stack, <span style="color:var(--brand-2)">topic by topic.</span></h1>
+            <p class="lead">NM Full Stack is a free reference for people learning web development from
+              scratch. Every technology — HTML, CSS, JavaScript, React, Node.js and MySQL — lives on its
+              own page, explained through direct questions and answers instead of long, hard-to-scan articles.</p>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a href="html.html" class="btn btn-lg px-4"
+                style="background:var(--brand); color:#fff; font-family:var(--font-display); font-weight:600;">Start
+                with HTML</a>
+              <a href="#modules" class="btn btn-lg px-4"
+                style="border:1px solid var(--border); color:var(--text); font-family:var(--font-display); font-weight:600;">Browse
+                all topics</a>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="editor-window">
+              <div class="tab-bar">
+                <div class="tab-dots"><span></span><span></span><span></span></div>
+                <div class="tab-chip">about.md</div>
+              </div>
+              <div class="editor-body">
+                <p class="mono mb-2" style="color:var(--text-faint); font-size:.8rem;"># NM Full Stack</p>
+                <p class="mono" style="font-size:.92rem; color:var(--text-muted); line-height:1.9;">
+                  <span style="color:var(--html)">&lt;/&gt;</span> Frontend: HTML, CSS, JS, React<br>
+                  <span style="color:var(--node)">&#9656;</span> Backend: Node.js<br>
+                  <span style="color:var(--mysql)">&#9724;</span> Database: MySQL<br><br>
+                  Every page = one topic.<br>
+                  Every answer = straight to the point.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stat-strip">
+      <div class="container-xl">
+        <div class="row text-center text-md-start">
+          <div class="col-4 col-md-3">
+            <div class="stat-num">6</div>
+            <div class="stat-label">Core topics</div>
+          </div>
+          <div class="col-4 col-md-3">
+            <div class="stat-num">48</div>
+            <div class="stat-label">Questions answered</div>
+          </div>
+          <div class="col-4 col-md-3">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Free &amp; responsive</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5" id="modules">
+      <div class="container-xl">
+        <div class="mb-4">
+          <span class="topic-badge" style="--accent:var(--brand)"><span class="lang-dot"></span>Project files</span>
+          <h2 class="mt-3" style="font-size:1.9rem;">Six files. One full stack.</h2>
+          <p class="text-muted-custom" style="max-width:60ch;">Click into any file below — each one opens as a
+            dedicated page with its own explanation and a Q&amp;A accordion you can expand at your own pace.</p>
+        </div>
+        <div class="row g-4">
+
+          <div class="col-md-6 col-lg-4">
+            <a href="html.html" class="text-decoration-none" data-topic="html">
+              <div class="file-card" data-topic="html">
+                <div class="file-top">
+                  <span class="filename">html.html</span>
+                  <span class="ext-badge">HTML</span>
+                </div>
+                <p>The skeleton of every page: elements, semantics, forms and attributes, explained through Q&A.</p>
+                <span class="card-cta">Open file <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg></span>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="css.html" class="text-decoration-none" data-topic="css">
+              <div class="file-card" data-topic="css">
+                <div class="file-top">
+                  <span class="filename">styles.css</span>
+                  <span class="ext-badge">CSS</span>
+                </div>
+                <p>Box model, selectors, Flexbox, Grid, positioning and responsive media queries.</p>
+                <span class="card-cta">Open file <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg></span>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="javascript.html" class="text-decoration-none" data-topic="javascript">
+              <div class="file-card" data-topic="javascript">
+                <div class="file-top">
+                  <span class="filename">app.js</span>
+                  <span class="ext-badge">JS</span>
+                </div>
+                <p>Variables, functions, the DOM, events and asynchronous JavaScript with promises.</p>
+                <span class="card-cta">Open file <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg></span>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="react.html" class="text-decoration-none" data-topic="react">
+              <div class="file-card" data-topic="react">
+                <div class="file-top">
+                  <span class="filename">App.jsx</span>
+                  <span class="ext-badge">JSX</span>
+                </div>
+                <p>Components, JSX, props, state, hooks and the virtual DOM for building fast UIs.</p>
+                <span class="card-cta">Open file <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg></span>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="mysql.html" class="text-decoration-none" data-topic="mysql">
+              <div class="file-card" data-topic="mysql">
+                <div class="file-top">
+                  <span class="filename">queries.sql</span>
+                  <span class="ext-badge">SQL</span>
+                </div>
+                <p>Tables, keys, joins, normalization and everyday CRUD queries.</p>
+                <span class="card-cta">Open file <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg></span>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="nodejs.html" class="text-decoration-none" data-topic="nodejs">
+              <div class="file-card" data-topic="nodejs">
+                <div class="file-top">
+                  <span class="filename">server.js</span>
+                  <span class="ext-badge">JS</span>
+                </div>
+                <p>The event loop, Express.js, REST APIs, middleware and connecting to MySQL.</p>
+                <span class="card-cta">Open file <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5"
+      style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+      <div class="container-xl">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <span class="topic-badge" style="--accent:var(--brand-2)"><span class="lang-dot"></span>Suggested
+              order</span>
+            <h2 class="mt-3" style="font-size:1.9rem;">A sensible learning path</h2>
+            <p class="text-muted-custom">You can read the pages in any order, but if you're starting from zero,
+              this is the sequence most full stack courses follow — frontend first, then the server, then the
+              database that backs it.</p>
+          </div>
+          <div class="col-lg-8">
+            <div class="path-rail">
+
+              <div class="path-step" style="--step-color:var(--html)">
+                <span class="step-tag">01 &middot; Structure</span>
+                <h6>HTML</h6>
+                <p>Learn how a page is built from elements, before anything else.</p>
+              </div>
+              <div class="path-step" style="--step-color:var(--css)">
+                <span class="step-tag">02 &middot; Presentation</span>
+                <h6>CSS</h6>
+                <p>Style that structure — layout, colour, spacing and responsiveness.</p>
+              </div>
+              <div class="path-step" style="--step-color:var(--javascript)">
+                <span class="step-tag">03 &middot; Behaviour</span>
+                <h6>JavaScript</h6>
+                <p>Make the page interactive and respond to the user.</p>
+              </div>
+              <div class="path-step" style="--step-color:var(--react)">
+                <span class="step-tag">04 &middot; UI Library</span>
+                <h6>React</h6>
+                <p>Scale up frontend work with reusable, component-based UI.</p>
+              </div>
+              <div class="path-step" style="--step-color:var(--nodejs)">
+                <span class="step-tag">05 &middot; Server</span>
+                <h6>Node.js</h6>
+                <p>Move to the backend and build APIs with JavaScript on the server.</p>
+              </div>
+              <div class="path-step" style="--step-color:var(--mysql)">
+                <span class="step-tag">06 &middot; Database</span>
+                <h6>MySQL</h6>
+                <p>Store, relate and query the data your application depends on.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="nm-footer">
+    <div class="container-xl">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <div class="foot-brand mb-2">NM_FullStack<span style="color:var(--brand-2)">_</span></div>
+          <p class="foot-about">A free, no-nonsense reference for learning full stack web development —
+            one topic per file, one concept at a time, from markup to database.</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Frontend</h6>
+          <ul>
+            <li><a class="foot-link" href="html.html" data-topic="html"><span class="lang-dot"></span>HTML</a></li>
+            <li><a class="foot-link" href="css.html" data-topic="css"><span class="lang-dot"></span>CSS</a></li>
+            <li><a class="foot-link" href="javascript.html" data-topic="javascript"><span
+                  class="lang-dot"></span>JavaScript</a></li>
+            <li><a class="foot-link" href="react.html" data-topic="react"><span class="lang-dot"></span>React</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Backend</h6>
+          <ul>
+            <li><a class="foot-link" href="nodejs.html" data-topic="nodejs"><span class="lang-dot"></span>Node.js</a>
+            </li>
+            <li><a class="foot-link" href="mysql.html" data-topic="mysql"><span class="lang-dot"></span>MySQL</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h6>Site</h6>
+          <ul>
+            <li><a class="foot-link" href="index.html"><span class="lang-dot"></span>Home</a></li>
+          </ul>
+          <p class="foot-about mt-3 mb-0">Built with HTML, CSS, JavaScript &amp; Bootstrap 5.
+            Fully responsive across phones, tablets and desktops.</p>
+        </div>
+      </div>
+      <hr>
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center foot-bottom gap-2">
+        <span>&copy; 2026 NM Full Stack. Built for learners, by learners.</span>
+        <span>Frontend <span class="mx-1">&middot;</span> Backend <span class="mx-1">&middot;</span> Database</span>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">&uarr;</button>
+
+  <!-- Bootstrap 5 JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Site script -->
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

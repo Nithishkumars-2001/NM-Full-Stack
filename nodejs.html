@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Node.js — Questions &amp; Answers · NM Full Stack</title>
+  <meta name="description"
+    content="Learn Node.js fundamentals — the event loop, npm, Express.js, REST APIs, middleware and connecting to MySQL.">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%238b5cf6%22/><text x=%2250%22 y=%2266%22 font-size=%2255%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22monospace%22>N</text></svg>">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Site stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body data-topic="nodejs">
+
+  <header>
+    <nav class="navbar navbar-expand-lg nm-navbar fixed-top">
+      <div class="container-xl">
+        <a class="navbar-brand nm-brand" href="index.html">NM_FullStack<span class="cursor">_</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nmNav"
+          aria-controls="nmNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nmNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1">
+            <li class="nav-item"><a class="nav-link" href="index.html"><span class="lang-dot"></span>Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="html.html" data-topic="html"><span
+                  class="lang-dot"></span>HTML</a></li>
+            <li class="nav-item"><a class="nav-link" href="css.html" data-topic="css"><span
+                  class="lang-dot"></span>CSS</a></li>
+            <li class="nav-item"><a class="nav-link" href="javascript.html" data-topic="javascript"><span
+                  class="lang-dot"></span>JavaScript</a></li>
+            <li class="nav-item"><a class="nav-link" href="react.html" data-topic="react"><span
+                  class="lang-dot"></span>React</a></li>
+            <li class="nav-item"><a class="nav-link" href="mysql.html" data-topic="mysql"><span
+                  class="lang-dot"></span>MySQL</a></li>
+            <li class="nav-item"><a class="nav-link active" href="nodejs.html" data-topic="nodejs"><span
+                  class="lang-dot"></span>Node.js</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div style="height:70px;" aria-hidden="true"></div>
+
+  <main>
+
+    <section class="topic-hero" data-topic="nodejs">
+      <div class="container-xl">
+        <span class="topic-badge"><span class="lang-dot"></span>Backend &middot; JavaScript Runtime</span>
+        <div class="accent-bar"></div>
+        <h1>Node.js</h1>
+        <p class="lead">Node.js lets JavaScript run outside the browser, powering fast, scalable backend servers and
+          APIs. This file covers the essentials for backend development.</p>
+      </div>
+    </section>
+
+    <section class="pb-5" data-topic="nodejs">
+      <div class="container-xl">
+        <div class="editor-window mb-4">
+          <div class="tab-bar">
+            <div class="tab-dots"><span></span><span></span><span></span></div>
+            <div class="tab-chip">server.js</div>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 order-2 order-lg-1">
+            <div class="outline-card">
+              <h6>On this page &middot; 16 questions</h6>
+              <a class="outline-link" href="#qnodejs1"><span class="ln">Q01</span><span>What is Node.js and how is it
+                  different from browser JavaScript?</span></a><a class="outline-link" href="#qnodejs2"><span
+                  class="ln">Q02</span><span>What is npm and package.json?</span></a><a class="outline-link"
+                href="#qnodejs3"><span class="ln">Q03</span><span>What is the Node.js event loop and why is Node
+                  non-blocking?</span></a><a class="outline-link" href="#qnodejs4"><span class="ln">Q04</span><span>What
+                  is Express.js and why is it used with Node?</span></a><a class="outline-link" href="#qnodejs5"><span
+                  class="ln">Q05</span><span>How do you create a simple REST API in Node/Express?</span></a><a
+                class="outline-link" href="#qnodejs6"><span class="ln">Q06</span><span>What is middleware in
+                  Express?</span></a><a class="outline-link" href="#qnodejs7"><span class="ln">Q07</span><span>How does
+                  Node.js connect to a MySQL database?</span></a><a class="outline-link" href="#qnodejs8"><span
+                  class="ln">Q08</span><span>What is the difference between require and import (CommonJS vs ES
+                  Modules)?</span></a>
+              <a class="outline-link" href="#qnodejs9"><span class="ln">Q09</span><span>What is npm vs npx?</span></a><a
+                class="outline-link" href="#qnodejs10"><span class="ln">Q10</span><span>What are environment variables
+                  and why are they used in Node?</span></a><a class="outline-link" href="#qnodejs11"><span
+                  class="ln">Q11</span><span>What is the difference between GET, POST, PUT, PATCH, and DELETE in a REST
+                  API?</span></a><a class="outline-link" href="#qnodejs12"><span class="ln">Q12</span><span>How do you
+                  handle errors in an Express application?</span></a><a class="outline-link" href="#qnodejs13"><span
+                  class="ln">Q13</span><span>What is CORS and why does it matter for Node APIs?</span></a><a
+                class="outline-link" href="#qnodejs14"><span class="ln">Q14</span><span>What is the difference between a
+                  connection and a connection pool in MySQL with Node?</span></a><a class="outline-link"
+                href="#qnodejs15"><span class="ln">Q15</span><span>What is JWT authentication and how is it used in Node
+                  APIs?</span></a><a class="outline-link" href="#qnodejs16"><span class="ln">Q16</span><span>What is the
+                  difference between synchronous and asynchronous file operations in Node's fs module?</span></a>
+              <ul class="meta-list">
+                <li><span>Layer</span><span>Backend / Server</span></li>
+                <li><span>Difficulty</span><span>Intermediate</span></li>
+                <li><span>Pairs with</span><span>MySQL, JavaScript</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-8 order-1 order-lg-2">
+            <div class="accordion qa-accordion" id="qaAccordion">
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hnodejs1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#qnodejs1"
+                    aria-expanded="true" aria-controls="qnodejs1">
+                    <span class="qline">Q01</span><span>What is Node.js and how is it different from browser
+                      JavaScript?</span>
+                  </button>
+                </h2>
+                <div id="qnodejs1" class="accordion-collapse collapse show" aria-labelledby="hnodejs1"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>Node.js is a runtime environment, built on Chrome's V8 engine, that lets JavaScript run outside
+                      the browser &mdash; on a server or a local machine. Unlike browser JavaScript, Node has no
+                      <code>window</code> or <code>document</code>, but it gains access to the file system, networking,
+                      and operating system through built-in modules.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hnodejs2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qnodejs2" aria-expanded="false" aria-controls="qnodejs2">
+                    <span class="qline">Q02</span><span>What is npm and package.json?</span>
+                  </button>
+                </h2>
+                <div id="qnodejs2" class="accordion-collapse collapse" aria-labelledby="hnodejs2"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p><strong>npm</strong> (Node Package Manager) installs and manages third-party libraries.
+                      <strong>package.json</strong> is the manifest file for a Node project &mdash; it lists
+                      dependencies, scripts, and project metadata.
+                    </p>
+                    <pre>npm init -y
+npm install express
+npm run start</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hnodejs3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qnodejs3" aria-expanded="false" aria-controls="qnodejs3">
+                    <span class="qline">Q03</span><span>What is the Node.js event loop and why is Node
+                      non-blocking?</span>
+                  </button>
+                </h2>
+                <div id="qnodejs3" class="accordion-collapse collapse" aria-labelledby="hnodejs3"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>Node.js runs JavaScript on a single thread, but heavy operations like file access or network
+                      requests are handed off to the system and completed <strong>asynchronously</strong>. The
+                      <strong>event loop</strong> constantly checks whether any of those operations have finished and
+                      runs their callback when ready, which is why Node can handle many requests at once without waiting
+                      on any single one.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hnodejs4">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qnodejs4" aria-expanded="false" aria-controls="qnodejs4">
+                    <span class="qline">Q04</span><span>What is Express.js and why is it used with Node?</span>
+                  </button>
+                </h2>
+                <div id="qnodejs4" class="accordion-collapse collapse" aria-labelledby="hnodejs4"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>Express is a minimal, flexible web framework for Node.js that simplifies building servers and
+                      APIs &mdash; handling routing, requests and responses without writing raw HTTP handling code from
+                      scratch.</p>
+                    <pre>const express = require('express');
+const app = express();
+
+app.listen(3000, () =&gt; console.log('Server running'));</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hnodejs5">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qnodejs5" aria-expanded="false" aria-controls="qnodejs5">
+                    <span class="qline">Q05</span><span>How do you create a simple REST API in Node/Express?</span>
+                  </button>
+                </h2>
+                <div id="qnodejs5" class="accordion-collapse collapse" aria-labelledby="hnodejs5"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>A REST API exposes routes that respond to HTTP methods (<code>GET</code>, <code>POST</code>,
+                      <code>PUT</code>, <code>DELETE</code>) and typically return JSON.
+                    </p>
+                    <pre>app.get('/api/users', (req, res) =&gt; {
+  res.json([{ id: 1, name: 'Aditi' }]);
+});
+
+app.post('/api/users', (req, res) =&gt; {
+  const newUser = req.body;
+  res.status(201).json(newUser);
+});</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hnodejs6">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qnodejs6" aria-expanded="false" aria-controls="qnodejs6">
+                    <span class="qline">Q06</span><span>What is middleware in Express?</span>
+                  </button>
+                </h2>
+                <div id="qnodejs6" class="accordion-collapse collapse" aria-labelledby="hnodejs6"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>Middleware are functions that run between receiving a request and sending a response &mdash; used
+                      for logging, authentication, parsing request bodies, and error handling. Each middleware can
+                      inspect or modify the request before passing control on with <code>next()</code>.</p>
+                    <pre>app.use(express.json());
+
+app.use((req, res, next) =&gt; {
+  console.log(req.method, req.url);
+  next();
+});</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hnodejs7">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qnodejs7" aria-expanded="false" aria-controls="qnodejs7">
+                    <span class="qline">Q07</span><span>How does Node.js connect to a MySQL database?</span>
+                  </button>
+                </h2>
+                <div id="qnodejs7" class="accordion-collapse collapse" aria-labelledby="hnodejs7"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>Node connects to MySQL using a driver package such as <code>mysql2</code>, creating a connection
+                      (or pool) and running SQL queries from JavaScript.</p>
+                    <pre>const mysql = require('mysql2');
+const db = mysql.createConnection({
+  host: 'localhost', user: 'root',
+  password: '', database: 'nm_fullstack'
+});
+
+db.query('SELECT * FROM users', (err, rows) =&gt; {
+  console.log(rows);
+});</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hnodejs8">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qnodejs8" aria-expanded="false" aria-controls="qnodejs8">
+                    <span class="qline">Q08</span><span>What is the difference between require and import (CommonJS vs
+                      ES Modules)?</span>
+                  </button>
+                </h2>
+                <div id="qnodejs8" class="accordion-collapse collapse" aria-labelledby="hnodejs8"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p><code>require()</code> is Node's original CommonJS module system, loaded synchronously.
+                      <code>import</code>/<code>export</code> is the newer ES Modules standard (the same syntax used in
+                      modern frontend JavaScript), which Node also supports when a file uses the <code>.mjs</code>
+                      extension or <code>"type": "module"</code> is set in <code>package.json</code>.
+                    </p>
+                    <pre>// CommonJS
+const express = require('express');
+module.exports = router;
+
+// ES Modules
+import express from 'express';
+export default router;</pre>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hnodejs9">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qnodejs9" aria-expanded="false" aria-controls="qnodejs9">
+                    <span class="qline">Q09</span><span>What is npm vs npx?</span>
+                  </button>
+                </h2>
+                <div id="qnodejs9" class="accordion-collapse collapse" aria-labelledby="hnodejs9"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p><code>npm</code> installs and manages packages. <code>npx</code> executes a package's binary
+                      directly, downloading it temporarily if it isn't already installed, which is handy for one-off
+                      commands or project scaffolding tools without installing them globally.</p>
+                    <pre>npm install express        # install as a dependency
+npx create-react-app app   # run a tool once, no permanent install</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hnodejs10">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qnodejs10" aria-expanded="false" aria-controls="qnodejs10">
+                    <span class="qline">Q10</span><span>What are environment variables and why are they used in
+                      Node?</span>
+                  </button>
+                </h2>
+                <div id="qnodejs10" class="accordion-collapse collapse" aria-labelledby="hnodejs10"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>Environment variables store configuration (API keys, database credentials, ports) outside of the
+                      source code, so sensitive values aren't hard-coded or committed to version control. They're
+                      commonly loaded from a <code>.env</code> file using the <code>dotenv</code> package.</p>
+                    <pre>require('dotenv').config();
+const dbPassword = process.env.DB_PASSWORD;</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hnodejs11">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qnodejs11" aria-expanded="false" aria-controls="qnodejs11">
+                    <span class="qline">Q11</span><span>What is the difference between GET, POST, PUT, PATCH, and DELETE
+                      in a REST API?</span>
+                  </button>
+                </h2>
+                <div id="qnodejs11" class="accordion-collapse collapse" aria-labelledby="hnodejs11"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><code>GET</code> &mdash; retrieve data</li>
+                      <li><code>POST</code> &mdash; create a new resource</li>
+                      <li><code>PUT</code> &mdash; replace a resource entirely</li>
+                      <li><code>PATCH</code> &mdash; partially update a resource</li>
+                      <li><code>DELETE</code> &mdash; remove a resource</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hnodejs12">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qnodejs12" aria-expanded="false" aria-controls="qnodejs12">
+                    <span class="qline">Q12</span><span>How do you handle errors in an Express application?</span>
+                  </button>
+                </h2>
+                <div id="qnodejs12" class="accordion-collapse collapse" aria-labelledby="hnodejs12"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>Express supports a special error-handling middleware with four parameters, placed after all other
+                      routes, which catches errors passed via <code>next(err)</code> or thrown in async code (with
+                      proper handling).</p>
+                    <pre>app.use((err, req, res, next) =&gt; {
+  console.error(err.stack);
+  res.status(500).json({ error: 'Something went wrong' });
+});</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hnodejs13">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qnodejs13" aria-expanded="false" aria-controls="qnodejs13">
+                    <span class="qline">Q13</span><span>What is CORS and why does it matter for Node APIs?</span>
+                  </button>
+                </h2>
+                <div id="qnodejs13" class="accordion-collapse collapse" aria-labelledby="hnodejs13"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>CORS (Cross-Origin Resource Sharing) is a browser security feature that blocks web pages from
+                      making requests to a different domain than the one that served them, unless the server explicitly
+                      allows it via response headers. Node APIs commonly use the <code>cors</code> package to enable
+                      this for a frontend hosted on a different origin.</p>
+                    <pre>const cors = require('cors');
+app.use(cors());</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hnodejs14">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qnodejs14" aria-expanded="false" aria-controls="qnodejs14">
+                    <span class="qline">Q14</span><span>What is the difference between a connection and a connection
+                      pool in MySQL with Node?</span>
+                  </button>
+                </h2>
+                <div id="qnodejs14" class="accordion-collapse collapse" aria-labelledby="hnodejs14"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>A single <strong>connection</strong> opens one channel to the database, which can become a
+                      bottleneck under load. A <strong>connection pool</strong> maintains a set of reusable connections
+                      that requests borrow and return, handling many simultaneous queries far more efficiently &mdash;
+                      the standard choice for production APIs.</p>
+                    <pre>const pool = mysql.createPool({
+  host: 'localhost', user: 'root', database: 'nm_fullstack',
+  connectionLimit: 10
+});</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hnodejs15">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qnodejs15" aria-expanded="false" aria-controls="qnodejs15">
+                    <span class="qline">Q15</span><span>What is JWT authentication and how is it used in Node
+                      APIs?</span>
+                  </button>
+                </h2>
+                <div id="qnodejs15" class="accordion-collapse collapse" aria-labelledby="hnodejs15"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>JWT (JSON Web Token) is a compact, signed token used to verify a user's identity on each request
+                      without the server storing session state. After login, the server issues a token; the client sends
+                      it back (usually in an <code>Authorization</code> header) on subsequent requests, and the server
+                      verifies its signature before granting access.</p>
+                    <pre>const token = jwt.sign({ userId: user.id }, secretKey, { expiresIn: '1h' });</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hnodejs16">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#qnodejs16" aria-expanded="false" aria-controls="qnodejs16">
+                    <span class="qline">Q16</span><span>What is the difference between synchronous and asynchronous file
+                      operations in Node's fs module?</span>
+                  </button>
+                </h2>
+                <div id="qnodejs16" class="accordion-collapse collapse" aria-labelledby="hnodejs16"
+                  data-bs-parent="#qaAccordion">
+                  <div class="accordion-body">
+                    <p>The <code>fs</code> module offers both. Synchronous methods (e.g. <code>fs.readFileSync</code>)
+                      block the event loop until the operation completes. Asynchronous methods (e.g.
+                      <code>fs.readFile</code> with a callback, or <code>fs.promises.readFile</code> with async/await)
+                      let Node continue handling other requests while waiting, which is why they're preferred in server
+                      code.</p>
+                    <pre>const data = await fs.promises.readFile('data.json', 'utf-8');</pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="nm-footer">
+    <div class="container-xl">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <div class="foot-brand mb-2">NM_FullStack<span style="color:var(--brand-2)">_</span></div>
+          <p class="foot-about">A free, no-nonsense reference for learning full stack web development —
+            one topic per file, one concept at a time, from markup to database.</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Frontend</h6>
+          <ul>
+            <li><a class="foot-link" href="html.html" data-topic="html"><span class="lang-dot"></span>HTML</a></li>
+            <li><a class="foot-link" href="css.html" data-topic="css"><span class="lang-dot"></span>CSS</a></li>
+            <li><a class="foot-link" href="javascript.html" data-topic="javascript"><span
+                  class="lang-dot"></span>JavaScript</a></li>
+            <li><a class="foot-link" href="react.html" data-topic="react"><span class="lang-dot"></span>React</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Backend</h6>
+          <ul>
+            <li><a class="foot-link" href="nodejs.html" data-topic="nodejs"><span class="lang-dot"></span>Node.js</a>
+            </li>
+            <li><a class="foot-link" href="mysql.html" data-topic="mysql"><span class="lang-dot"></span>MySQL</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h6>Site</h6>
+          <ul>
+            <li><a class="foot-link" href="index.html"><span class="lang-dot"></span>Home</a></li>
+          </ul>
+          <p class="foot-about mt-3 mb-0">Built with HTML, CSS, JavaScript &amp; Bootstrap 5.
+            Fully responsive across phones, tablets and desktops.</p>
+        </div>
+      </div>
+      <hr>
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center foot-bottom gap-2">
+        <span>&copy; 2026 NM Full Stack. Built for learners, by learners.</span>
+        <span>Frontend <span class="mx-1">&middot;</span> Backend <span class="mx-1">&middot;</span> Database</span>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">&uarr;</button>
+
+  <!-- Bootstrap 5 JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Site script -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
