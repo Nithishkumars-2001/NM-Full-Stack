@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://nmfullstackdeveloper.netlify.app/</loc>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://nmfullstackdeveloper.netlify.app/html.html</loc>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://nmfullstackdeveloper.netlify.app/css.html</loc>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://nmfullstackdeveloper.netlify.app/javascript.html</loc>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://nmfullstackdeveloper.netlify.app/bootstrap.html</loc>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://nmfullstackdeveloper.netlify.app/react.html</loc>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://nmfullstackdeveloper.netlify.app/nodejs.html</loc>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://nmfullstackdeveloper.netlify.app/mysql.html</loc>
+        <priority>0.9</priority>
+    </url>
+
+</urlset>
